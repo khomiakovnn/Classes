@@ -1,10 +1,11 @@
-import { Character } from "./Character"
+import Character from './Character.js';
 
 export default class Bowman extends Character {
-    constructor (name) {
-        super(name, 'Bowman')
-    }
+  constructor(name) {
+    super(name, 'Bowman');
+  }
 
-    attack = 25
-    defence = 25
+  attack = 25;
+
+  defence = 25;
 }
