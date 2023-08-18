@@ -1,21 +1,24 @@
 import Character from '../Character.js';
 
+function typeTest() {
+  return new Character('Ivan', 'Bowmann');
+}
 test('Incorrect type', () => {
-  expect(() => {
-    Character('Ivan', 'Bowmann');
-  }).toThrow('Parameter "Type" is invalid!');
+  expect(typeTest).toThrow('Parameter "Type" is invalid!');
 });
 
+function smallName() {
+  return new Character('I', 'Bowmann');
+}
 test('Too small name', () => {
-  expect(() => {
-    Character('I', 'Bowman');
-  }).toThrow('Parameter "Name" is invalid!');
+  expect(smallName).toThrow('Parameter "Name" is invalid!');
 });
 
+function bigName() {
+  return new Character('Ivannnnn123678', 'Bowmann');
+}
 test('Too big name', () => {
-  expect(() => {
-    Character('Ivannnnn123678', 'Bowman');
-  }).toThrow('Parameter "Name" is invalid!');
+  expect(bigName).toThrow('Parameter "Name" is invalid!');
 });
 
 const typesDatalist = [
